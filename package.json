@@ -1,0 +1,15 @@
+{
+  "name": "groupec",
+  "version": "1.0.0",
+  "description": "projet fullstack js MEAN",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "mohamed amine mezghich",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.1.3",
+    "express": "^4.17.1"
+  }
+}
