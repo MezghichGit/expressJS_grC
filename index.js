@@ -34,3 +34,10 @@ app.put('/equipes/:id', (req,res)=>{
     equipe.country = req.body.country;
     res.status(200).json(equipe);
 });
+
+app.delete('/equipes/:id', (req,res)=>{
+    const id = parseInt(req.params.id);
+    let equipe = equipes.find(equipe => equipe.id === id)
+    equipes.splice(equipes.indexOf(equipe),1)
+    res.status(200).json(equipes);
+});
