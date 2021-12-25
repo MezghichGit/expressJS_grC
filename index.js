@@ -1,7 +1,8 @@
 const express = require("express"); // l'import ou le chargement de express
 const app = express();  // la création d'une instance du serveur express
-
+var cors = require('cors');
 //Middleware
+app.use(cors());
 app.use(express.json());
 //const equipes = require('./equipes.json');
 app.listen(82, ()=>{
