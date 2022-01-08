@@ -69,9 +69,13 @@ app.get('/equipes', (req,res) => {
                 
                 app.delete('/equipes/:id', async (req,res) => {
                       try {
-                          const id = parseInt(req.params.id)
-                          const equipe = await db.collection('equipe').deleteOne({id})
-                          res.status(200).json(equipe)
+                       
+                         const id = req.params.id
+                         //console.log("Back ="+id);
+                          //const equipe = await db.collection('equipe').deleteOne({_id})
+                          
+                    const equipe = await db.collection('equipe').deleteOne({_id:new mongodb.ObjectID(id.toString())});
+                   // res.status(200).json(equipe)
                       } catch (err) {
                           console.log(err)
                           throw err
