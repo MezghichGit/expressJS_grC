@@ -1,3 +1,4 @@
+// Backend équipe
 const express = require("express"); // l'import ou le chargement de express
 const app = express();  // la création d'une instance du serveur express
 var cors = require('cors');
